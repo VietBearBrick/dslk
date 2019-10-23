@@ -15,6 +15,7 @@ void Nhap_ds(NODEPTR& list);
 void Xuat_ds(NODEPTR list);
 void GiaiPhong(NODEPTR& list);
 NODEPTR Tim_node_x(NODEPTR list, TYPEINFO x);
+NODEPTR Chensau_q(NODEPTR q,TYPEINFO x);
 
 
 #include "Header.h"
@@ -75,6 +76,12 @@ NODEPTR Tim_node_x(NODEPTR list, TYPEINFO x);
 		}
 		return p;
 	}
+NODEPTR Chensau_q(NODEPTR q,TYPEINFO x){
+NODEPTR p=Tao_node(x);
+p->link=q->link;
+q->link=p
+return q;
+}
 
 #include "Header.h"
 void main()
